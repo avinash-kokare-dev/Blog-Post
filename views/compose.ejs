@@ -1,0 +1,18 @@
+<%- include('partials/header'); -%>
+<section id="compose">
+    <div class="container">
+        <h1 class="mt-4 ml-2">Compose</h1>
+        <form action="/compose" method="POST">
+            <div class="form-group">
+                <h5 class="mt-5">Title</h5>
+                <input type="text" class="form-control mt-2 " id="title" autocomplete="off" name="title" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <h5 class="ml-2">Post</h5>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Post Content" name="post"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success mt-2 ml-1" name="" value="" id="btn">Publish</button>
+        </form>
+    </div>
+</section>
+<%- include('partials/footer'); -%>

@@ -1,0 +1,33 @@
+<%- include('partials/header'); -%>
+<section id="homeContent">
+  <div class="container">
+    <h1 class="text-center mt-3 mb-3">Home</h1>
+    <p id="home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis non consequatur tempore sint nulla. In magnam ea
+      quis excepturi qui distinctio cumque, totam neque nostrum iste ex molestias architecto dolore!
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam hic voluptates unde eligendi animi pariatur
+      provident, corrupti officiis, vero quo maxime, maiores consectetur iusto nulla est? Voluptate adipisci aut
+      tempore.
+    </p>
+  </div>
+</section>
+<h1 class="text-center mt-5 mb-5" id="all-post">All Posts</h1>
+<% if(newPost.length == 0){%>
+<div class="container" id="posts">
+  <h1>Empty List</h1>
+</div>
+<%}else{%>
+<% newPost.forEach((post)=>{ %>
+<div class="container" id="posts">
+  <h1 id="headerTitle"><%=post.postTitle%></h1>
+  <p id="postDetail"><%=post.postContent.substr(0,100)%><a href="/posts/<%=post._id%>">...Read More</a></p>
+</div>
+<%})%>
+<%}%>
+  </section>
+<%- include('partials/footer'); -%>
+</body>
+<script>
+
+</script>
+
+</html>
